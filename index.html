@@ -1,29 +1,132 @@
-import React from "react";
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SureCash</title>
 
-export default function SureCashPage() { return ( <div className="min-h-screen bg-gray-50 flex items-center justify-center p-4"> <div className="bg-white rounded-3xl shadow-2xl max-w-md w-full overflow-hidden transform transition-all hover:scale-105"> {/* Header */} <div className="bg-gradient-to-r from-blue-500 to-blue-600 p-6 rounded-b-3xl text-center"> <h1 className="text-3xl font-extrabold text-white tracking-wide">SureCash</h1> </div>
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet" />
 
-{/* Content */}
-    <div className="p-6 flex flex-col items-center">
-      <img
-        src="https://share.google/wfe7h65jwFetxQa7x"
-        alt="Stack of Cash"
-        className="rounded-2xl shadow-lg mb-6 w-full object-cover"
+  <style>
+    :root {
+      --blue: #3b82f6;
+      --blue-dark: #2563eb;
+      --bg: #f4f7ff;
+      --text-dark: #1a1a1a;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: var(--bg);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      padding: 20px;
+    }
+
+    .card {
+      background: white;
+      width: 100%;
+      max-width: 380px;
+      border-radius: 28px;
+      overflow: hidden;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+      animation: fadeIn 0.6s ease-out forwards;
+      opacity: 0;
+    }
+
+    @keyframes fadeIn {
+      to { opacity: 1; }
+    }
+
+    .header {
+      background: linear-gradient(135deg, var(--blue), var(--blue-dark));
+      padding: 26px;
+      text-align: center;
+    }
+
+    .header h1 {
+      color: white;
+      font-size: 2rem;
+      font-weight: 800;
+    }
+
+    .content {
+      padding: 24px;
+      text-align: center;
+    }
+
+    .content img {
+      width: 100%;
+      border-radius: 20px;
+      margin-bottom: 20px;
+      box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+    }
+
+    .content h2 {
+      font-size: 1.5rem;
+      color: var(--text-dark);
+      font-weight: 600;
+      margin-bottom: 20px;
+    }
+
+    .join-btn {
+      display: inline-block;
+      background: linear-gradient(135deg, var(--blue), var(--blue-dark));
+      color: white;
+      padding: 14px 32px;
+      border-radius: 999px;
+      text-decoration: none;
+      font-size: 1.05rem;
+      font-weight: 600;
+      box-shadow: 0 8px 18px rgba(37, 99, 235, 0.3);
+      transition: 0.2s ease-in-out;
+    }
+
+    .join-btn:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 12px 25px rgba(37, 99, 235, 0.4);
+    }
+
+    .join-btn:active {
+      transform: translateY(0);
+      box-shadow: 0 4px 10px rgba(37, 99, 235, 0.2);
+    }
+  </style>
+</head>
+<body>
+
+  <div class="card">
+    <div class="header">
+      <h1>SureCash</h1>
+    </div>
+
+    <div class="content">
+      <img 
+        src="https://i.imgur.com/dZQ3G7z.jpeg" 
+        alt="Stack of cash"
       />
 
-      <h2 className="text-2xl font-semibold text-gray-800 mb-6 text-center">
-        Wanna make low risk cash?
-      </h2>
+      <h2>Wanna make low risk cash?</h2>
 
-      <a
-        href="https://chat.whatsapp.com/KFrZQ992ra3FLV5YRe0z7Q"
+      <a 
+        class="join-btn" 
+        href="https://chat.whatsapp.com/KFrZQ992ra3FLV5YRe0z7Q" 
         target="_blank"
         rel="noopener noreferrer"
-        className="bg-gradient-to-r from-blue-500 to-blue-600 text-white px-8 py-3 rounded-full shadow-lg font-semibold text-lg transition-all hover:scale-105 hover:shadow-2xl"
       >
         Join Now!
       </a>
     </div>
   </div>
-</div>
 
-); }
+</body>
+</html>
